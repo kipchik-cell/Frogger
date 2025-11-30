@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+#start-screen {
+  background: #006400;
+  z-index: 10;
+}
+
+#game-screen {
+  background: #87CEEB;
+  z-index: 5;
+}
+
+#game-over-screen, #level-complete-screen {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 8;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 0 #000;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+button {
+  background: #32CD32;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #228B22;
+}
+
+input {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  width: 250px;
+}
+
+.game-container {
+  position: relative;
+  width: 560px;
+  height: 600px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  overflow: hidden;
+  background: #90EE90;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #333;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+
+.road, .river, .safe, .goal {
+  position: absolute;
+  width: 100%;
+}
+
+.road {
+  background: #696969;
+  height: 240px;
+  top: 240px;
+}
+
+.river {
+  background: #1E90FF;
+  height: 180px;
+  top: 60px;
+}
+
+.safe {
+  background: #90EE90;
+  height: 60px;
+}
+
+.goal {
+  background: #90EE90;
+  height: 60px;
+  top: 0;
+}
+
+.lane {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+
+.car, .log {
+  position: absolute;
+}
+
+.car {
+  background: #FF4500;
+  width: 80px;
+  height: 40px;
+  top: 10px;
+  border-radius: 5px;
+}
+
+.log {
+  background: #8B4513;
+  width: 120px;
+  height: 40px;
+  top: 10px;
+  border-radius: 5px;
+}
+
+.frog {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #32CD32;
+  border-radius: 50%;
+  transition: all 0.2s;
+  z-index: 10;
+  border: 2px solid #000;
+}
+
+.home {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  border: 2px dashed #000;
+  top: 10px;
+  background: rgba(144, 238, 144, 0.3);
+}
+
+.home.filled {
+  background: rgba(255, 69, 0, 0.3);
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.controls p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    width: 100%;
+    height: 80vh;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
