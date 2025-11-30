@@ -71,4 +71,5 @@ frogger-game/
 ```bash
 npx eslint js/ --ext .js
 npx prettier --check .
+
 https://kipchik-cell.github.io/Frogger/
