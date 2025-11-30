@@ -68,8 +68,8 @@ frogger-game/
 
 ## Проверка Качества Кода
 Установите ESLint/Prettier для проверки качества кода:
-```bash
-npx eslint js/ --ext .js
-npx prettier --check .
+`bash
+  `npx eslint js/ --ext .js
+    `npx prettier --check .
 
 https://kipchik-cell.github.io/Frogger/
